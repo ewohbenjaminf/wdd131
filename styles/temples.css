@@ -25,7 +25,7 @@ body {
 
 header {
     background-color: #173f5f;
-    color: white;
+    color: #ffffff;
     padding: 1rem;
 }
 
@@ -52,7 +52,7 @@ header {
     margin-top: -2.2rem;
     border: none;
     background: transparent;
-    color: white;
+    color: #ffffff;
     font-size: 2rem;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
@@ -79,7 +79,7 @@ nav.open {
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.75rem 1rem;
     text-align: center;
@@ -129,7 +129,7 @@ h1 {
 
 figure {
     margin: 0;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
@@ -159,7 +159,7 @@ figcaption {
 
 footer {
     background-color: #173f5f;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem 1rem;
     margin-top: 2rem;
