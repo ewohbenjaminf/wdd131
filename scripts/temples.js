@@ -5,21 +5,23 @@
 const menuButton = document.querySelector("#menu-button");
 const navigation = document.querySelector("#navigation");
 
-menuButton.addEventListener("click", () => {
-    navigation.classList.toggle("open");
+if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+        navigation.classList.toggle("open");
 
-    const isOpen = navigation.classList.contains("open");
+        const isOpen = navigation.classList.contains("open");
 
-    if (isOpen) {
-        menuButton.textContent = "✕";
-        menuButton.setAttribute("aria-label", "Close navigation menu");
-        menuButton.setAttribute("aria-expanded", "true");
-    } else {
-        menuButton.textContent = "☰";
-        menuButton.setAttribute("aria-label", "Open navigation menu");
-        menuButton.setAttribute("aria-expanded", "false");
-    }
-});
+        if (isOpen) {
+            menuButton.textContent = "✕";
+            menuButton.setAttribute("aria-label", "Close navigation menu");
+            menuButton.setAttribute("aria-expanded", "true");
+        } else {
+            menuButton.textContent = "☰";
+            menuButton.setAttribute("aria-label", "Open navigation menu");
+            menuButton.setAttribute("aria-expanded", "false");
+        }
+    });
+}
 
 
 // ==============================
@@ -27,8 +29,11 @@ menuButton.addEventListener("click", () => {
 // ==============================
 
 const currentYear = new Date().getFullYear();
+const yearElement = document.querySelector("#currentyear");
 
-document.querySelector("#currentyear").textContent = currentYear;
+if (yearElement) {
+    yearElement.textContent = currentYear;
+}
 
 
 // ==============================
@@ -36,6 +41,8 @@ document.querySelector("#currentyear").textContent = currentYear;
 // ==============================
 
 const lastModified = document.lastModified;
+const modifiedElement = document.querySelector("#lastModified");
 
-document.querySelector("#lastModified").textContent =
-    `Last Modified: ${lastModified}`;
+if (modifiedElement) {
+    modifiedElement.textContent = `Last Modified: ${lastModified}`;
+}
