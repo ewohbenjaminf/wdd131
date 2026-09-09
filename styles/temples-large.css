@@ -1,0 +1,124 @@
+/* ==============================
+   LARGE SCREEN STYLES
+   ============================== */
+
+@media screen and (min-width: 700px) {
+
+    /* ==============================
+       HEADER
+       ============================== */
+
+    header {
+        padding: 1.2rem 2rem;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .site-title {
+        font-size: 2rem;
+    }
+
+
+    /* ==============================
+       HAMBURGER
+       ============================== */
+
+    .menu-button {
+        display: none;
+    }
+
+
+    /* ==============================
+       NAVIGATION
+       ============================== */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        border: none;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+        background-color: #286b8f;
+    }
+
+
+    /* ==============================
+       MAIN
+       ============================== */
+
+    main {
+        padding: 2rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+
+    /* ==============================
+       TEMPLE GRID
+       ============================== */
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+
+    /* ==============================
+       FIGURES
+       ============================== */
+
+    figure {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    figcaption {
+        font-size: 1.15rem;
+        padding: 1rem;
+    }
+
+
+    /* ==============================
+       FOOTER
+       ============================== */
+
+    footer {
+        margin-top: 3rem;
+        padding: 2rem;
+    }
+}
+
+
+/* ==============================
+   EXTRA LARGE SCREENS
+   ============================== */
+
+@media screen and (min-width: 1100px) {
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
