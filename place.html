@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about Nigeria, including its location, population, climate, and weather."
+    >
+
+    <meta name="author" content="Ewoh Benjamin Friday">
+
+    <title>Nigeria | WDD 131 Country Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <picture>
+                <source
+                    media="(min-width: 700px)"
+                    srcset="images/nigeria-large.webp"
+                >
+                <img
+                    src="images/nigeria.webp"
+                    alt="Landscape representing Nigeria"
+                    width="800"
+                    height="533"
+                >
+            </picture>
+        </section>
+
+        <section class="information">
+            <div class="about">
+                <h2>About Nigeria</h2>
+
+                <p>
+                    Nigeria is a country in West Africa and is one of the
+                    most populous countries in Africa. It is known for its
+                    diverse cultures, languages, natural resources, and
+                    vibrant cities.
+                </p>
+
+                <dl>
+                    <dt>Area:</dt>
+                    <dd>923,768 km²</dd>
+
+                    <dt>Population:</dt>
+                    <dd>Over 200 million</dd>
+
+                    <dt>Capital:</dt>
+                    <dd>Abuja</dd>
+
+                    <dt>Currency:</dt>
+                    <dd>Nigerian Naira (₦)</dd>
+
+                    <dt>Official Language:</dt>
+                    <dd>English</dd>
+                </dl>
+            </div>
+
+            <div class="weather">
+                <h2>Weather</h2>
+
+                <img
+                    src="images/weather.png"
+                    alt="Weather icon"
+                    width="80"
+                    height="80"
+                >
+
+                <p>
+                    Nigeria has a tropical climate with temperatures that
+                    vary across different regions of the country.
+                </p>
+
+                <dl>
+                    <dt>Temperature:</dt>
+                    <dd id="temperature">30 °C</dd>
+
+                    <dt>Conditions:</dt>
+                    <dd id="conditions">Partly Cloudy</dd>
+
+                    <dt>Wind:</dt>
+                    <dd id="wind">10 km/h</dd>
+
+                    <dt>Wind Chill:</dt>
+                    <dd id="windchill">N/A</dd>
+                </dl>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Ewoh Benjamin Friday | Nigeria
+        </p>
+
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>
