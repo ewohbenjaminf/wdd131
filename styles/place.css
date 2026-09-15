@@ -1,0 +1,228 @@
+/* ==============================
+   W03 COUNTRY PAGE - NIGERIA
+   ============================== */
+
+:root {
+    --green: #008751;
+    --dark-green: #005c37;
+    --light-green: #e8f5ee;
+    --white: #ffffff;
+    --dark: #17211b;
+    --gray: #f4f6f5;
+    --border: #d8e2dc;
+    --shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ==============================
+   GENERAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: var(--dark);
+    background-color: var(--gray);
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   HEADINGS
+   ============================== */
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+header {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* ==============================
+   MAIN
+   ============================== */
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+
+/* ==============================
+   HERO IMAGE
+   ============================== */
+
+.hero {
+    width: 100%;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* ==============================
+   INFORMATION CARDS
+   ============================== */
+
+.info-card {
+    margin: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.info-card h2,
+.about h2 {
+    margin-top: 0;
+    color: var(--dark-green);
+    border-bottom: 2px solid var(--green);
+    padding-bottom: 0.4rem;
+}
+
+
+/* ==============================
+   DATA
+   ============================== */
+
+dl {
+    margin: 0;
+}
+
+dl div {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin: 0;
+}
+
+
+/* ==============================
+   WEATHER
+   ============================== */
+
+.weather-content p {
+    margin: 0.4rem 0;
+}
+
+.weather-icon-mobile img {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* ==============================
+   ABOUT
+   ============================== */
+
+.about {
+    padding: 1rem 1.25rem 2rem;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+
+/* ==============================
+   LARGE SCREEN
+   ============================== */
+
+@media (min-width: 700px) {
+
+    header {
+        padding: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero {
+        position: relative;
+    }
+
+    .hero img {
+        min-height: 520px;
+        max-height: 650px;
+        object-fit: cover;
+    }
+
+    .info-card {
+        position: absolute;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.96);
+    }
+
+    .data-card {
+        top: 2rem;
+        left: 2rem;
+    }
+
+    .weather-card {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    /* Required pseudo-element */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.6rem;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    .about {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}

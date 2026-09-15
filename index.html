@@ -1,86 +1,149 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Discover Nigeria, including its capital, language, climate, and other interesting facts.">
 
-<title>WDD 131 - Dynamic Web Fundamentals - Ewoh Benjamin Friday</title>
+    <meta name="author" content="Ewoh Benjamin Friday">
 
-<meta name="description"
-    content="WDD 131 - Dynamic Web Fundamentals course page for Ewoh Benjamin Friday, featuring information about web development, personal interests, and Nigeria.">
+    <title>Nigeria | WDD 131</title>
 
-<meta name="author" content="Ewoh Benjamin Friday">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 
-<link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/place.css">
 
-<script src="scripts/getdates.js" defer></script>
-
-
+    <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
 
+    <header>
+        <h1>Nigeria</h1>
+    </header>
 
-<header>
-    <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+    <main>
 
-    <nav>
-        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
-        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
-        <a href="#">Final Project</a>
-    </nav>
-</header>
+        <section class="hero">
+            <picture>
+                <source media="(min-width: 700px)" srcset="images/nigeria-large.webp">
 
-<main>
-    <h1>Ewoh Benjamin Friday</h1>
+                <img src="images/nigeria.webp"
+                    alt="Beautiful landscape of Nigeria"
+                    width="1200"
+                    height="700">
+            </picture>
+        </section>
 
-    <section class="card">
-        <h2>About Me</h2>
+        <section class="info-card data-card">
 
-        <img src="images/benjamin.jpg" alt="Ewoh Benjamin Friday">
+            <h2>Data</h2>
+
+            <dl>
+                <div>
+                    <dt>Area:</dt>
+                    <dd>923,768 km²</dd>
+                </div>
+
+                <div>
+                    <dt>Population:</dt>
+                    <dd>Over 200 million</dd>
+                </div>
+
+                <div>
+                    <dt>Capital:</dt>
+                    <dd>Abuja</dd>
+                </div>
+
+                <div>
+                    <dt>Language:</dt>
+                    <dd>English</dd>
+                </div>
+
+                <div>
+                    <dt>Currency:</dt>
+                    <dd>Nigerian Naira (₦)</dd>
+                </div>
+
+                <div>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+1</dd>
+                </div>
+            </dl>
+
+        </section>
+
+        <section class="info-card weather-card">
+
+            <h2>Weather</h2>
+
+            <div class="weather-content">
+
+                <div class="weather-icon-mobile">
+                    <img src="images/weather.svg" alt="Partly cloudy weather">
+                </div>
+
+                <p>
+                    <strong>Temperature:</strong>
+                    <span id="temperature">28</span> °C
+                </p>
+
+                <p>
+                    <strong>Conditions:</strong>
+                    Partly cloudy
+                </p>
+
+                <p>
+                    <strong>Wind:</strong>
+                    <span id="wind-speed">10</span> km/h
+                </p>
+
+                <p>
+                    <strong>Wind Chill:</strong>
+                    <span id="wind-chill">N/A</span>
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="about">
+
+            <h2>About Nigeria</h2>
+
+            <p>
+                Nigeria is a diverse country in West Africa on the Gulf of Guinea.
+                Abuja is the capital, and the country has 36 states and the Federal
+                Capital Territory. Nigeria is known for its diverse cultures,
+                languages, landscapes, and people.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
 
         <p>
-            My name is Ewoh Benjamin Friday. I am a student of software
-            development and I am currently learning web development.
-            I enjoy learning
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a>,
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS</a>,
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a>,
-            and other programming technologies. My goal is to develop useful
-            software and websites that can solve real-world problems.
+            &copy; <span id="currentyear"></span>
+            Ewoh Benjamin Friday | Nigeria
         </p>
-    </section>
-
-    <section class="card">
-        <h2>Nigeria</h2>
-
-        <img src="images/nigeria.jpg" alt="Beautiful landscape in Nigeria">
 
         <p>
-            Nigeria is a country in West Africa with a rich cultural
-            heritage and diverse people. It is known for its many
-            languages, traditions, natural resources, and growing
-            technology industry. I am proud to learn and develop my
-            technology skills from Nigeria.
+            Last Modification:
+            <span id="lastModified"></span>
         </p>
-    </section>
-</main>
 
-<footer>
-    <p>
-        &copy; <span id="currentyear"></span> Ewoh Benjamin Friday,
-        Nigeria
-    </p>
-
-    <p id="lastModified"></p>
-</footer>
+    </footer>
 
 </body>
+
 </html>
