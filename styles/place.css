@@ -30,6 +30,12 @@ body {
     line-height: 1.6;
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
 
 /* ==============================
    HEADINGS
@@ -45,6 +51,11 @@ h1 {
     font-size: 2rem;
 }
 
+h2 {
+    margin-top: 0;
+    color: var(--dark-green);
+}
+
 
 /* ==============================
    HEADER
@@ -55,17 +66,6 @@ header {
     color: var(--white);
     text-align: center;
     padding: 1rem;
-}
-
-
-/* ==============================
-   MAIN
-   ============================== */
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--white);
 }
 
 
@@ -86,23 +86,43 @@ main {
 
 
 /* ==============================
+   INFORMATION
+   ============================== */
+
+.information {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--gray);
+}
+
+
+/* ==============================
    INFORMATION CARDS
    ============================== */
 
 .info-card {
-    margin: 1rem;
-    padding: 1rem 1.25rem;
+    padding: 1.25rem;
     background-color: var(--white);
     border: 1px solid var(--border);
+    border-radius: 6px;
     box-shadow: var(--shadow);
 }
 
-.info-card h2,
-.about h2 {
-    margin-top: 0;
-    color: var(--dark-green);
-    border-bottom: 2px solid var(--green);
+.info-card h2 {
+    margin-bottom: 1rem;
     padding-bottom: 0.4rem;
+    border-bottom: 2px solid var(--green);
+}
+
+
+/* ==============================
+   PARAGRAPHS
+   ============================== */
+
+.info-card p {
+    margin-top: 0;
 }
 
 
@@ -111,14 +131,16 @@ main {
    ============================== */
 
 dl {
-    margin: 0;
+    margin: 1rem 0 0;
 }
 
 dl div {
     display: grid;
-    grid-template-columns: 110px 1fr;
+    grid-template-columns: 115px 1fr;
     gap: 0.5rem;
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
 }
 
 dt {
@@ -134,23 +156,26 @@ dd {
    WEATHER
    ============================== */
 
-.weather-content p {
-    margin: 0.4rem 0;
+.weather {
+    background-color: var(--light-green);
 }
 
-.weather-icon-mobile img {
-    width: 55px;
-    height: 55px;
-    margin-bottom: 0.5rem;
+.weather-icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
 }
 
 
 /* ==============================
-   ABOUT
+   HOVER EFFECT
    ============================== */
 
-.about {
-    padding: 1rem 1.25rem 2rem;
+.info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.16);
+    transition: 0.2s ease;
 }
 
 
@@ -177,7 +202,7 @@ footer p {
 @media (min-width: 700px) {
 
     header {
-        padding: 1.2rem;
+        padding: 1.25rem;
     }
 
     h1 {
@@ -194,35 +219,30 @@ footer p {
         object-fit: cover;
     }
 
+    .information {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        padding: 2rem;
+        margin-top: -170px;
+        position: relative;
+    }
+
     .info-card {
-        position: absolute;
-        width: 300px;
+        min-height: 360px;
         background-color: rgba(255, 255, 255, 0.96);
     }
 
-    .data-card {
-        top: 2rem;
-        left: 2rem;
+    .weather {
+        background-color: rgba(232, 245, 238, 0.97);
     }
 
-    .weather-card {
-        top: 2rem;
-        right: 2rem;
-    }
-
-    /* Required pseudo-element */
-    .weather-card h2::after {
+    .weather h2::after {
         content: " ⛅";
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
-    .weather-icon-mobile {
-        display: none;
-    }
-
-    .about {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
+    .weather-icon {
+        float: right;
+        margin: 0 0 1rem 1rem;
     }
 }
