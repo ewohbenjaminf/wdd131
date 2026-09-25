@@ -124,7 +124,7 @@ h1 {
 
 
 /* ==============================
-   FIGURES
+   TEMPLE CARDS
    ============================== */
 
 figure {
@@ -144,11 +144,22 @@ figure img {
 }
 
 figcaption {
-    padding: 0.8rem;
-    text-align: center;
+    padding: 1rem;
+}
+
+figcaption h2 {
+    margin: 0 0 0.5rem;
     font-family: "Playfair Display", serif;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    color: #173f5f;
+}
+
+figcaption p {
+    margin: 0.35rem 0;
+    font-size: 0.95rem;
+}
+
+figcaption strong {
     color: #173f5f;
 }
 
