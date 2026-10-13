@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share feedback about Discover Nigeria and save your favorite Nigerian destination.">
+    <meta name="author" content="Ewoh Benjamin Friday">
+    <title>Visitor Feedback | Discover Nigeria</title>
+    <link rel="stylesheet" href="styles/project.css">
+    <script src="../scripts/project.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <p class="site-title">Discover Nigeria</p>
+            <p class="tagline">Culture, Food, Places, and Heritage</p>
+        </div>
+
+        <nav>
+            <div class="navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="food.html">Food</a></li>
+                    <li><a href="places.html">Places</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="feedback.html" aria-current="page">Feedback</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content-section">
+            <h1 class="section-title">Share Your Feedback</h1>
+
+            <p>
+                Tell us what you think about Discover Nigeria and choose
+                the Nigerian destination you would most like to visit.
+            </p>
+
+            <p id="saved-preference" aria-live="polite">
+                You have not saved a favorite destination yet.
+            </p>
+
+            <form id="feedback-form">
+                <p>
+                    <label for="visitor-name">Your name (required)</label>
+                    <input
+                        type="text"
+                        id="visitor-name"
+                        name="visitorName"
+                        autocomplete="name"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="favorite-destination">
+                        Favorite destination (required)
+                    </label>
+                    <select
+                        id="favorite-destination"
+                        name="favoriteDestination"
+                        required
+                    >
+                        <option value="">Choose a destination</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="visitor-feedback">Your feedback (required)</label>
+                    <textarea
+                        id="visitor-feedback"
+                        name="visitorFeedback"
+                        rows="5"
+                        required
+                        minlength="5"
+                        placeholder="What did you enjoy, or what could we improve?"
+                    ></textarea>
+                </p>
+
+                <button class="button" type="submit">Submit Feedback</button>
+            </form>
+
+            <p id="feedback-message" role="status" aria-live="polite"></p>
+
+            <p>
+                Feedback submissions recorded in this browser:
+                <strong id="feedback-count">0</strong>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Discover Nigeria | Ewoh Benjamin Friday
+        </p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+</body>
+</html>

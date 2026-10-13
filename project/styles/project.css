@@ -258,3 +258,56 @@ footer p {
         font-size: 2.5rem;
     }
 }
+
+/* Visitor feedback form */
+#feedback-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 42rem;
+    margin: 1.5rem auto;
+}
+
+#feedback-form p {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+}
+
+#feedback-form label {
+    font-weight: 600;
+}
+
+#feedback-form input,
+#feedback-form select,
+#feedback-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #767676;
+    border-radius: 0.3rem;
+    font: inherit;
+    background-color: #fff;
+    color: #222;
+}
+
+#feedback-form input:focus-visible,
+#feedback-form select:focus-visible,
+#feedback-form textarea:focus-visible,
+#feedback-form button:focus-visible {
+    outline: 3px solid #d97706;
+    outline-offset: 3px;
+}
+
+#feedback-form textarea {
+    resize: vertical;
+}
+
+#feedback-form button {
+    justify-self: start;
+    cursor: pointer;
+}
+
+#feedback-message,
+#saved-preference {
+    line-height: 1.6;
+}
